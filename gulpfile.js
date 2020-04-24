@@ -32,7 +32,7 @@ gulp.task('scripts', () => {
 
 
 gulp.task('stylesheets', () => {
-    return gulp.src(['node_modules/bulma/bulma.sass', 'src/assets/scss/*.scss'])
+    return gulp.src(['node_modules/line-awesome/dist/line-awesome/scss/line-awesome.scss', 'node_modules/bulma/bulma.sass', 'src/assets/scss/*.scss'])
         .pipe(sourcemaps.init())
         .pipe(sass().on( 'error', sass.logError ))
         .pipe(cleanCSS({compatibility: 'ie8'}))
@@ -42,7 +42,12 @@ gulp.task('stylesheets', () => {
         .pipe(gulp.dest('dist/css'))
 })
 
-gulp.task('build', gulp.parallel('html', 'stylesheets', 'scripts'))
+gulp.task('copyLineAwesome', () => {
+    return gulp.src('node_modules/line-awesome/dist/line-awesome/fonts/*')
+        .pipe(gulp.dest('dist/fonts'))
+})
+
+gulp.task('build', gulp.parallel('html', gulp.series('copyLineAwesome', 'stylesheets'), 'scripts'))
 
 gulp.task('watch', () => {
     gulp.watch('src/*.pug', gulp.series('html'))
