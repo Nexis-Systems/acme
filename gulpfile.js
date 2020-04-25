@@ -10,7 +10,7 @@ const cleanCSS = require('gulp-clean-css')
 const sourcemaps = require('gulp-sourcemaps')
 
 gulp.task('html', () => {
-    return gulp.src(['src/*.pug', '!src/layout.pug'])
+    return gulp.src(['src/*.pug', '!src/*-layout.pug'])
         .pipe(pug())
         .pipe(htmlmin())
         .pipe(gulp.dest('dist'))
