@@ -1,0 +1,76 @@
+extends layout.pug
+
+block title
+    | Earnings
+
+block content
+    .container.page-earnings
+        h1.has-text-info.is-size-3 Earnings
+        br
+        br
+
+        form(action="", method="post")
+            .field.is-grouped
+                p.control
+                    a.button.is-primary
+                        | Secondary
+                p.control
+                    .select.is-fullwidth
+                        select
+                            option Select dropdown
+                            option With options
+
+
+        .table-container.is-fullwidth
+            table.table.is-bordered
+                thead
+                    tr  
+                        th 
+                        th Date
+                        th Total Tips
+                        th Total Earnings
+                tbody
+                    tr  
+                        td
+                            | &nbsp;
+                        td
+                            | &nbsp;
+                        td
+                            | &nbsp;
+                        td
+                            | &nbsp;
+
+                    tr  
+                        td
+                            | &nbsp;
+                        td
+                            | &nbsp;
+                        td
+                            | &nbsp;
+                        td
+                            | &nbsp;
+
+
+
+        nav.pagination.custom-pagination.is-right(role='navigation', aria-label='pagination')
+            ul.pagination-list
+                li
+                    a.pagination-link(aria-label='Previous') 
+                        i.las.la-angle-double-left
+
+                li
+                    a.pagination-link.is-current(aria-label='Page 1') 
+                        | 1
+                
+                li
+                    a.pagination-link(aria-label='Page 2') 
+                        | 2
+                
+                li
+                    a.pagination-link(aria-label='Page 3') 
+                        | 3
+
+                li
+                    a.pagination-link(aria-label='Next') 
+                        i.las.la-angle-double-right
+                
