@@ -1,0 +1,103 @@
+html(lang="en")
+    head
+        meta(charset='UTF-8')
+        meta(name='author', content='Abdul Rehman (https://github.com/AbdulRehmanMeha)')
+        meta(name='viewport', content='width=device-width, initial-scale=1.0')
+
+        title 
+            block title
+            |  - Driver Dashboard - ACME 
+            
+        link(rel="stylesheet", href="/css/bulma.css")
+        link(rel="stylesheet", href="/css/line-awesome.css")
+        link(rel="stylesheet", href="/css/style.css")
+        link(rel="stylesheet", href="/css/driver-dashboard.css")
+
+        block stylesheets
+    body
+        .container.is-fluid.wrap-up
+            //- Top Navigation
+            nav.navbar.top-nav(role='navigation' aria-label='main navigation')
+                .navbar-brand
+                    a.navbar-item
+                        | ACME
+
+                a.navbar-burger.burger(role='button' aria-label='menu' aria-expanded='false' data-target='navbarBasicExample')
+                    span(aria-hidden='true')
+                    span(aria-hidden='true')
+                    span(aria-hidden='true')
+                #navbarBasicExample.navbar-menu
+                    
+                    .navbar-end
+                        .navbar-item
+                            input.input(type="text", placeholder="Search")
+                        .navbar-item
+                            .buttons
+                                a.button.is-danger OPEN TICKET
+                        a.navbar-item
+                            i.las.la-bell.la-2x
+                        a.navbar-item
+                            i.las.la-user.la-2x
+
+                            
+
+        
+            .columns.is-fullheight
+                .column.is-2
+                    //- Side Menu
+                    aside.menu.side-menu
+                        p.menu-label
+                            | Driver Dashboard
+                        ul.menu-list
+                            li
+                                a(href="/driver/dashboard.html") Home
+                            li
+                                a(href="/driver/order.html") Orders
+                            li
+                                a(href="/driver/earnings.html") Earnings
+                            li
+                                a(href="/driver/history.html") History
+                                
+                        //- p.menu-label
+                        //-     | Administration
+                        //- ul.menu-list
+                        //-     li
+                        //-         a Team Settings
+                        //-     li
+                        //-         a.is-active Manage Your Team
+                        //-         ul
+                        //-             li
+                        //-                 a Members
+                        //-             li
+                        //-                 a Plugins
+                                        
+                        //-             li
+                        //-                 a Add a member
+                        //-     li
+                        //-         a Invitations
+                        //-     li
+                        //-         a Cloud Storage Environment Settings
+                        //-     li
+                        //-         a Authentication
+                        //- p.menu-label
+                        //-     | Transactions
+                        //- ul.menu-list
+                            li
+                                a Payments
+                            li
+                                a Transfers
+                            li
+                                a Balance
+
+
+
+                .column.is-10
+                    .content-wrapper
+                        block content
+
+
+        script(src="/js/script.js")
+
+        block scripts
+            
+            
