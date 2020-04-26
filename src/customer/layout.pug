@@ -1,0 +1,75 @@
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        title 
+            block title
+            |  - Customer Dashboard - ACME 
+            
+        link(rel="stylesheet", href="/css/bulma.css")
+        link(rel="stylesheet", href="/css/line-awesome.css")
+        link(rel="stylesheet", href="/css/style.css")
+
+        block stylesheets
+    body
+        .container.is-fluid.wrap-up
+            //- Top Navigation
+            nav.navbar.top-nav(role='navigation' aria-label='main navigation')
+                .navbar-brand
+                    a.navbar-item
+                        | ACME
+
+                a.navbar-burger.burger(role='button' aria-label='menu' aria-expanded='false' data-target='navbarBasicExample')
+                    span(aria-hidden='true')
+                    span(aria-hidden='true')
+                    span(aria-hidden='true')
+                #navbarBasicExample.navbar-menu
+                    
+                    .navbar-end
+                        .navbar-item
+                            input.input(type="text", placeholder="Search")
+                        .navbar-item
+                            .buttons
+                                a.button.is-dark WISHLIST
+                        a.navbar-item
+                            i.las.la-bell.la-2x
+                        a.navbar-item
+                            i.las.la-user.la-2x
+                        a.navbar-item
+                            i.las.la-shopping-basket.la-2x
+
+                            
+
+        
+            .columns.is-fullheight
+                .column.is-2
+                    //- Side Menu
+                    aside.menu.side-menu
+                        p.menu-label
+                            | Customer Dashboard
+                        ul.menu-list
+                            li
+                                a(href="/customer/dashboard.html") Home
+                            li
+                                a(href="/customer/orders.html") My Orders
+                            li
+                                a(href="/customer/invoices.html") My Invoices
+                            li
+                                a(href="/customer/edit-profile.html") Edit Profile
+                            li
+                                a(href="/customer/exchange-and-returns.html") Exchange and Returns
+                            li
+                                a(href="/customer/credits.html") Credits
+                            li
+                                a(href="/customer/reviews.html") My Reviews
+
+                .column.is-10
+                    .content-wrapper
+                        block content
+
+
+        script(src="/js/script.js")
+
+        block scripts
+            
+            
