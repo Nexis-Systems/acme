@@ -1,0 +1,92 @@
+extends layout.pug
+
+block title
+    | Add Product
+
+
+
+block content
+    .container
+
+        h1.has-text-info.is-size-3 New Product
+        button.button.is-danger(style="float: right; margin-top: -40px") Save
+        br
+        br
+
+        form(action="")
+            .field 
+                .control
+                    section.slider-checkbox
+                        input#1(type='checkbox')
+                        label.label(for='1') Enable Product
+            .field
+                .control
+                    label.label Product Name
+                    input.input(type='text', placeholder='Product Name')
+
+            .field
+                .control
+                    label.label SKU
+                    input.input(type='text', placeholder='SKU')
+
+            .field
+                .control
+                    label.label Price
+                    input.input(type='number', placeholder='Price')
+            
+            .field
+                .control
+                    label.label Tax Class
+                    .select
+                        select
+                            option 1
+                            option 2
+
+
+            .field
+                .control
+                    label.label Quantity
+                    input.input(type='number', placeholder='Quantity')
+            
+            .field
+                .control
+                    label.label Stock Status
+                    .select
+                        select
+                            option 1
+                            option 2
+
+
+            .field
+                .control
+                
+                    label.label Weight
+                    .field.has-addons
+                        p.control
+                            input.input(type='number', placeholder='')
+                        p.control
+                            input.input(type='number', placeholder='')
+                        p.control
+                            input.input(type='number', placeholder='')
+
+            .field
+                .control
+                    label.label Categories
+                    .select
+                        select
+                            option 1
+                            option 2
+
+            .field
+                .control
+                    label.label Image
+                    button.button Upload
+
+            .field
+                .control
+                    label.label Product Name
+                    input.input(type='text', placeholder='Product Name')
+
+
+
+
