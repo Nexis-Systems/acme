@@ -1,0 +1,156 @@
+extends layout.pug
+
+block title
+    | Edit Profile
+
+
+block stylesheets
+    style.
+        .content-tab {
+            display: none
+        }
+
+block content
+    .container
+
+        h1.has-text-info.is-size-3 EDIT PROFILE
+        br
+        br
+        .tabs.is-toggle.is-fullwidth
+            ul
+                li.tab.is-active(data-target="personal-details")
+                    a
+                        span Personal Details
+
+                li.tab(data-target="contact-and-address-details")
+                    a
+                        span Contact and Address Details
+
+                li.tab(data-target="change-password")
+                    a
+                        span Change Password
+
+        
+
+        section
+
+            #personal-details.content-tab 
+                form(action="")
+                    .field
+                        .control
+                            label.label Title
+                            input.input(type='text', placeholder='Title')
+
+                    .field
+                        .control
+                            label.label First Name
+                            input.input(type='text', placeholder='First Name')
+
+                    .field
+                        .control
+                            label.label Last Name
+                            input.input(type='text', placeholder='Last Name')
+
+                    .field
+                        .control
+                            label.label Email Address
+                            input.input(type='email', placeholder='Email Address')
+
+                    .field
+                        .control
+                            label.label Type of Identification
+                            .control
+                                label.radio
+                                    input(type='radio', name='rsvp')
+                                    |     ID Number
+                                label.radio
+                                    input(type='radio', name='rsvp')
+                                    |     Passport
+
+
+                    .field
+                        .control
+                            label.label ID Number
+                            input.input(type='text', placeholder='ID Number')
+
+                    .field
+                        .control
+                            label.label Passport Number
+                            input.input(type='text', placeholder='Passport Number')
+
+                    .field
+                        .control
+                            label.label Date
+                            input.input(type='date', placeholder='Date')
+
+                    .field
+                        .control
+                            label.label Gender
+                            .control
+                                label.radio
+                                    input(type='radio', name='rsvp')
+                                    |    Female
+                                label.radio
+                                    input(type='radio', name='rsvp')
+                                    |     Male
+
+                    .field
+                        .control
+                            button.button.is-danger Save
+
+        
+            #contact-and-address-details.content-tab 
+                form(action="")
+                    .field
+                        .control
+                            label.label Cell Number
+                            input.input(type='text', placeholder='Cell Number')
+                    .field
+                        .control
+                            label.label Street
+                            input.input(type='text', placeholder='Street')
+                            
+                    .field    
+                        .control
+                            label.label Surbub
+                            input.input(type='text', placeholder='Surbub')
+                            
+                    .field
+                        .control
+                            label.label City
+                            input.input(type='text', placeholder='City')
+                            
+                    .field
+                        .control
+                            label.label Postal Code
+                            input.input(type='text', placeholder='Postal Code')
+                            
+                    .field
+                        .control
+                            label.label Province
+                            input.input(type='text', placeholder='Province')
+                            
+
+                    .field
+                        .control
+                            button.button.is-danger Save
+            
+
+            #change-password.content-tab 
+                form(action="")
+                    .field
+                        .control
+                            label.label Password
+                            input.input(type='password', placeholder='Password')
+                    .field
+                        .control
+                            label.label Confirm Password
+                            input.input(type='password', placeholder='Confirm Password')
+
+                    .field
+                        .control
+                            button.button.is-danger Save
+
+
+block scripts 
+    script(src="/js/tabs.js")
