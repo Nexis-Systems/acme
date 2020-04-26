@@ -1,0 +1,98 @@
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        title 
+            block title
+            |  - Admin Dashboard - ACME 
+            
+        link(rel="stylesheet", href="/css/bulma.css")
+        link(rel="stylesheet", href="/css/line-awesome.css")
+        link(rel="stylesheet", href="/css/style.css")
+
+        block stylesheets
+    body
+        .container.is-fluid.wrap-up
+            //- Top Navigation
+            nav.navbar.top-nav(role='navigation' aria-label='main navigation')
+                .navbar-brand
+                    a.navbar-item
+                        | ACME
+
+                a.navbar-burger.burger(role='button' aria-label='menu' aria-expanded='false' data-target='navbarBasicExample')
+                    span(aria-hidden='true')
+                    span(aria-hidden='true')
+                    span(aria-hidden='true')
+                #navbarBasicExample.navbar-menu
+                    
+                    .navbar-end
+                        .navbar-item
+                            input.input(type="text", placeholder="Search")
+                        a.navbar-item
+                            i.las.la-bell.la-2x
+                        a.navbar-item
+                            i.las.la-user.la-2x
+
+                            
+
+        
+            .columns.is-fullheight
+                .column.is-2
+                    //- Side Menu
+                    aside.menu.side-menu
+                        p.menu-label
+                            i.las.la-tachometer-alt.la-2x
+                            | Admin Dashboard
+                        ul.menu-list
+                            li
+                                a(href="/admin/dashboard.html") Home
+                            //- li
+                            //-     a(href="/admin/sales.html") Sales
+                            //- li
+                            //-     a(href="/admin/reports.html") Reports
+                            //- li
+                            //-     a(href="/admin/users.html") Users
+                            //- li
+                            //-     a(href="/admin/products.html") Products
+
+                        //- Sales MENU
+                        p.menu-label
+                            i.las.la-dollar-sign.la-2x
+                            | Sales
+                        ul.menu-list
+                            li
+                                a(href="/admin/invoice.html") Invoice
+
+
+                        //- Reports MENU
+                        p.menu-label
+                            i.las.la-chart-bar.la-2x
+                            | Reports
+                        ul.menu-list
+                            li
+                                a(href="/admin/ordered-products-report.html") Ordered Products Report
+
+                        //- Products MENU
+                        p.menu-label
+                            i.las.la-boxes.la-2x
+                            | Products
+                        ul.menu-list
+                            li
+                                a(href="/admin/add-product.html") Add Product
+                                a(href="/admin/product-add-category.html") Add Category
+                                a(href="/admin/product-low-stock-report.html") Low Stock Report
+
+
+                .column.is-10
+                    .content-wrapper
+                        block content
+
+
+
+        
+
+        script(src="/js/script.js")
+
+        block scripts
+            
+            
