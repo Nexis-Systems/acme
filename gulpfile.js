@@ -10,7 +10,7 @@ const cleanCSS = require('gulp-clean-css')
 const sourcemaps = require('gulp-sourcemaps')
 
 gulp.task('html', () => {
-    return gulp.src(['src/*.pug', '!src/*-layout.pug'])
+    return gulp.src(['src/**/*.pug', '!src/**/layout.pug'])
         .pipe(pug())
         .pipe(htmlmin())
         .pipe(gulp.dest('dist'))
@@ -50,7 +50,7 @@ gulp.task('copyLineAwesome', () => {
 gulp.task('build', gulp.parallel('html', gulp.series('copyLineAwesome', 'stylesheets'), 'scripts'))
 
 gulp.task('watch', () => {
-    gulp.watch('src/*.pug', gulp.series('html'))
+    gulp.watch('src/*/**.pug', gulp.series('html'))
     gulp.watch('src/assets/js/*.js', gulp.series('scripts'))
     gulp.watch('src/assets/scss/*.scss', gulp.series('stylesheets'))
 })
