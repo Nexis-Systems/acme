@@ -1,0 +1,33 @@
+extends layout.pug
+
+block title
+    | Each Order
+
+
+block content
+    .container
+
+        h1.has-text-info.is-size-3 Each Order
+        br
+        input.input.is-size-5(type="text", placeholder="Search")
+        br
+        br
+        .tabs.is-toggle.is-fullwidth
+            ul
+                li
+                    a
+                        span Order #
+                li
+                    a
+                        span Items
+                li
+                    a
+                        span Approved
+
+        br
+        br
+        .tabs.is-toggle.is-fullwidth
+            ul
+                li
+                    a
+                        span Total
