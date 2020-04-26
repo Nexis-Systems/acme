@@ -1,0 +1,43 @@
+extends layout.pug
+
+block title
+    | Add Category
+
+
+
+block content
+    .container
+
+        h1.has-text-info.is-size-3 New Category
+        button.button.is-danger(style="float: right; margin-top: -40px") Save
+        br
+        br
+
+        form(action="")
+            .field
+                .control
+                    label.label Category Name
+                    input.input(type='text', placeholder='Category Name')
+
+            .field
+                .control
+                    label.label Category Image
+                    .field
+                        .file
+                            label.file-label
+                                input.file-input(type='file', name='resume')
+                                span.file-cta
+                                span.file-icon
+                                    i.fas.fa-upload
+                                span.file-label
+                                    | Choose a file&mldr;
+
+
+            .field
+                .control
+                    label.label Description
+                    textarea.textarea(placeholder='Description')
+
+
+
+
