@@ -1,0 +1,115 @@
+extends layout.pug
+
+block title
+    | Drivers
+
+
+
+
+block content
+    .container
+
+        h1.has-text-info.is-size-3 Drivers
+        br
+   
+
+        .columns
+            .column.is-12
+                div
+                    .buttons(style="float: right; margin: 10px 0px;")
+                        a.button.is-dark Filter
+
+
+                .table-container.is-fullwidth
+                    table.table.is-bordered
+                        thead
+                            tr  
+                                th ID
+                                th Thumbnail
+                                th Date Joined
+                                th First Name
+                                th Last Name
+                                th ID / Passport Number
+                                th DOB
+                                th Email
+                                th Phone
+                                th Vehical Registration
+                                th Driver's License #
+                        tbody
+                            tr  
+                                td
+                                    | &nbsp;
+                                td
+                                    | &nbsp;
+                                td
+                                    | &nbsp;
+                                td
+                                    | &nbsp;
+                                td
+                                    | &nbsp;
+                                td
+                                    | &nbsp;
+                                td
+                                    | &nbsp;
+                                td
+                                    | &nbsp;
+                                td
+                                    | &nbsp;
+                                td
+                                    | &nbsp;
+                                td
+                                    | &nbsp;
+                                
+                            tr  
+                                td
+                                    | &nbsp;
+                                td
+                                    | &nbsp;
+                                td
+                                    | &nbsp;
+                                td
+                                    | &nbsp;
+                                td
+                                    | &nbsp;
+                                td
+                                    | &nbsp;
+                                td
+                                    | &nbsp;
+                                td
+                                    | &nbsp;
+                                td
+                                    | &nbsp;
+                                td
+                                    | &nbsp;
+                                td
+                                    | &nbsp;
+
+        
+
+        .columns
+            .column.is-8
+                | &nbsp;
+            
+            .column.is-4
+                nav.pagination.custom-pagination.is-right(role='navigation', aria-label='pagination')
+                    ul.pagination-list
+                        li
+                            a.pagination-link(aria-label='Previous') 
+                                i.las.la-angle-double-left
+
+                        li
+                            a.pagination-link.is-current(aria-label='Page 1') 
+                                | 1
+                        
+                        li
+                            a.pagination-link(aria-label='Page 2') 
+                                | 2
+                        
+                        li
+                            a.pagination-link(aria-label='Page 3') 
+                                | 3
+
+                        li
+                            a.pagination-link(aria-label='Next') 
+                                i.las.la-angle-double-right
+                            
