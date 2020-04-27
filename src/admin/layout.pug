@@ -53,9 +53,17 @@ html(lang="en")
                             | Sales
                         ul.menu-list
                             li
-                                a(href="/admin/invoice.html") Invoice
+                                a(href="/admin/orders.html") Orders
+                            li
+                                a(href="/admin/invoice.html") Invoices
+                            li
+                                a(href="/admin/transactions.html") Transactions
+                            li
+                                a(href="/admin/approve-order.html") Approve Orders
                             li
                                 a(href="/admin/abandoned-carts.html") Abandoned Carts
+                            li
+                                a(href="/admin/unfulfilled-orders.html") Unfulfilled Orders
 
 
                         //- Reports MENU
@@ -64,26 +72,57 @@ html(lang="en")
                             | Reports
                         ul.menu-list
                             li
+                                a(href="/admin/orders-report.html") Orders Report
+                            li
+                                a(href="/admin/order-all-report.html") Order Total Report
+                            li
                                 a(href="/admin/ordered-products-report.html") Ordered Products Report
-
-
+                            li
+                                a(href="/admin/product-views-report.html") Product Views Report
+                            li
+                                a(href="/admin/product-reviews-report.html") Product Reviews Report
+                            li
+                                a(href="/admin/downloads-report.html") Downloads Report
+                            li
+                                a(href="/admin/product-low-stock-report.html") Product Low Stock  Report
+                            li
+                                a(href="/admin/drivers-report.html") Drivers Report 
+                            li
+                                a(href="/admin/invoice-report.html") Invoice Report 
+                            li
+                                a(href="/admin/new-accounts-report.html") New Accounts Report 
+                            li
+                                a(href="/admin/refunds-report.html") Refunds Report
+                            li
+                                a(href="/admin/best-seller-report.html") Best Seller Report
+                            li
+                                a(href="/admin/customer-reviews-report.html") Customer Reviews Report
+                            li
+                                a(href="/admin/sales-report.html") Sales Report
+                                a(href="/admin/sattlement-report.html") Sattlements Report
+                                
                         //- Stores MENU
                         p.menu-label
                             i.las.la-store.la-2x
                             | Stores
                         ul.menu-list
                             li
-                                a(href="/admin/invoice.html") Invoice
+                                a(href="/admin/all-vendors.html") Vendors
+                            
 
                         //- Customers MENU
                         p.menu-label
                             i.las.la-users.la-2x
-                            | Customers
+                            | Users
                         ul.menu-list
                             li
+                                a(href="/admin/add-users.html") Add Users
+                            li
+                                a(href="/admin/manage-users.html") Manage Users
+                            li
                                 a(href="/admin/all-customers.html") All Customers
-                            //- li
-                            //-     a(href="/admin/abandoned-carts.html") Abandoned Carts
+                            li
+                                a(href="/admin/online-customers.html") Online Customers
 
                         //- Products MENU
                         p.menu-label
@@ -91,11 +130,12 @@ html(lang="en")
                             | Products
                         ul.menu-list
                             li
+                                a(href="/admin/all-products.html") View Products
+                            li
                                 a(href="/admin/add-product.html") Add Product
                             li
                                 a(href="/admin/product-add-category.html") Add Category
-                            li
-                                a(href="/admin/product-low-stock-report.html") Low Stock 
+                            
                                 
                         p.menu-label
                             i.las.la-truck.la-2x
@@ -103,6 +143,8 @@ html(lang="en")
                         ul.menu-list
                             li
                                 a(href="/admin/add-driver.html") Add Driver
+                            li
+                                a(href="/admin/all-drivers.html") View Drivers
 
 
                 .column.is-10
