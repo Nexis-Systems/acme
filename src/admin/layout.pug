@@ -46,22 +46,16 @@ html(lang="en")
                         ul.menu-list
                             li
                                 a(href="/admin/dashboard.html") Home
-                            //- li
-                            //-     a(href="/admin/sales.html") Sales
-                            //- li
-                            //-     a(href="/admin/reports.html") Reports
-                            //- li
-                            //-     a(href="/admin/users.html") Users
-                            //- li
-                            //-     a(href="/admin/products.html") Products
 
                         //- Sales MENU
                         p.menu-label
-                            i.las.la-dollar-sign.la-2x
+                            i.las.la-coins.la-2x
                             | Sales
                         ul.menu-list
                             li
                                 a(href="/admin/invoice.html") Invoice
+                            li
+                                a(href="/admin/abandoned-carts.html") Abandoned Carts
 
 
                         //- Reports MENU
@@ -72,6 +66,25 @@ html(lang="en")
                             li
                                 a(href="/admin/ordered-products-report.html") Ordered Products Report
 
+
+                        //- Stores MENU
+                        p.menu-label
+                            i.las.la-store.la-2x
+                            | Stores
+                        ul.menu-list
+                            li
+                                a(href="/admin/invoice.html") Invoice
+
+                        //- Customers MENU
+                        p.menu-label
+                            i.las.la-users.la-2x
+                            | Customers
+                        ul.menu-list
+                            li
+                                a(href="/admin/all-customers.html") All Customers
+                            //- li
+                            //-     a(href="/admin/abandoned-carts.html") Abandoned Carts
+
                         //- Products MENU
                         p.menu-label
                             i.las.la-boxes.la-2x
@@ -79,8 +92,17 @@ html(lang="en")
                         ul.menu-list
                             li
                                 a(href="/admin/add-product.html") Add Product
+                            li
                                 a(href="/admin/product-add-category.html") Add Category
-                                a(href="/admin/product-low-stock-report.html") Low Stock Report
+                            li
+                                a(href="/admin/product-low-stock-report.html") Low Stock 
+                                
+                        p.menu-label
+                            i.las.la-truck.la-2x
+                            | Drivers
+                        ul.menu-list
+                            li
+                                a(href="/admin/add-driver.html") Add Driver
 
 
                 .column.is-10
