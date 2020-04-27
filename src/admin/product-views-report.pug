@@ -1,0 +1,96 @@
+extends layout.pug
+
+block title
+    | Product Views Report
+
+
+
+
+block content
+    .container
+
+        h1.has-text-info.is-size-3 Product Views Report
+        br
+
+
+        .columns
+            .column.is-12
+                section.is-fullwidth(style="margin-bottom: -60px")
+                    form(action="", method="post")
+                        .field.is-grouped
+                            p.control
+                                label.label From
+                                input.input(type="text")
+                            p.control
+                                label.label To
+                                input.input(type="text")
+                            p.control
+                                label.label Show By
+                                .select(style="margin-top: 32px; margin-left: -75px")
+                                    select
+                                        option Select dropdown
+                                        option With options
+
+                            
+                a.button.is-dark(style="float: right; margin: 0px 0px 10px 0px;") Export
+
+
+                .table-container.is-fullwidth
+                    table.table.is-bordered
+                        thead
+                            tr  
+                                th Interval
+                                th Product
+                                th Price
+                                th Views
+                        tbody
+                            tr  
+                                td
+                                    | &nbsp;
+                                td
+                                    | &nbsp;
+                                td
+                                    | &nbsp;
+                                td
+                                    | &nbsp;
+                                
+                            tr  
+                                td
+                                    | &nbsp;
+                                td
+                                    | &nbsp;
+                                td
+                                    | &nbsp;
+                                td
+                                    | &nbsp;
+
+
+        .columns
+            .column.is-8
+                | &nbsp;
+
+            .column.is-4
+                nav.pagination.custom-pagination.is-right(role='navigation', aria-label='pagination')
+                    ul.pagination-list
+                        li
+                            a.pagination-link(aria-label='Previous') 
+                                i.las.la-angle-double-left
+
+                        li
+                            a.pagination-link.is-current(aria-label='Page 1') 
+                                | 1
+                        
+                        li
+                            a.pagination-link(aria-label='Page 2') 
+                                | 2
+                        
+                        li
+                            a.pagination-link(aria-label='Page 3') 
+                                | 3
+
+                        li
+                            a.pagination-link(aria-label='Next') 
+                                i.las.la-angle-double-right
+
+
+                            
