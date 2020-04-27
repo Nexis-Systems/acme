@@ -3,15 +3,15 @@ const pug = require('gulp-pug')
 const sass = require('gulp-sass')
 const babel = require('gulp-babel')
 const uglify = require('gulp-uglify')
-const rename = require('gulp-rename')
-const concat = require('gulp-concat')
 const htmlmin = require('gulp-htmlmin')
 const cleanCSS = require('gulp-clean-css')
 const sourcemaps = require('gulp-sourcemaps')
+const htmlbeautify = require('gulp-html-beautify')
 
 gulp.task('html', () => {
     return gulp.src(['src/**/*.pug', '!src/**/layout.pug'])
         .pipe(pug())
+        .pipe(htmlbeautify())
         .pipe(gulp.dest('dist'))
 })
 
@@ -24,9 +24,10 @@ gulp.task('htmlprod', () => {
 
 gulp.task('scripts', () => {
     return gulp.src(
-      [
-      'src/assets/js/*.js'
-      ])
+        [
+            'src/assets/js/*.js'
+        ]
+      )
       .pipe(sourcemaps.init())
       .pipe(babel({ presets: ["@babel/preset-env"] }))
       .pipe(uglify())
@@ -38,7 +39,14 @@ gulp.task('scripts', () => {
 
 
 gulp.task('stylesheets', () => {
-    return gulp.src(['node_modules/line-awesome/dist/line-awesome/scss/line-awesome.scss', 'node_modules/bulma/bulma.sass', 'src/assets/scss/*.scss'])
+    return gulp.src(
+            [
+                'node_modules/chartist/dist/scss/chartist.scss',
+                'node_modules/line-awesome/dist/line-awesome/scss/line-awesome.scss', 
+                'node_modules/bulma/bulma.sass', 
+                'src/assets/scss/*.scss'
+            ]
+        )
         .pipe(sourcemaps.init())
         .pipe(sass().on( 'error', sass.logError ))
         .pipe(cleanCSS({compatibility: 'ie8'}))
@@ -53,8 +61,13 @@ gulp.task('copyLineAwesome', () => {
         .pipe(gulp.dest('dist/fonts'))
 })
 
-gulp.task('dev', gulp.parallel('html', gulp.series('copyLineAwesome', 'stylesheets'), 'scripts'))
-gulp.task('build', gulp.parallel('htmlprod', gulp.series('copyLineAwesome', 'stylesheets'), 'scripts'))
+gulp.task('copyScripts', () => {
+    return gulp.src('node_modules/chartist/dist/chartist.min.js')
+        .pipe(gulp.dest('dist/js'))
+})
+
+gulp.task('dev', gulp.parallel('html', gulp.series('copyLineAwesome', 'stylesheets'), gulp.series('scripts', 'copyScripts')))
+gulp.task('build', gulp.parallel('htmlprod', gulp.series('copyLineAwesome', 'stylesheets'), gulp.series('scripts', 'copyScripts')))
 
 gulp.task('watch', () => {
     gulp.watch('src/*/**.pug', gulp.series('html'))
