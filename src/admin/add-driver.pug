@@ -1,0 +1,28 @@
+extends layout.pug
+
+block title
+    | Add Driver
+
+
+
+block content
+    .container
+
+        h1.has-text-info.is-size-3 Add New Driver
+        br
+        br
+
+        form(action="")
+            .field
+                .control
+                    label.label Name
+                    input.input(type='text', placeholder='Name')
+
+            .field
+                .control
+                    label.label Address
+                    input.input(type='text', placeholder='Address')
+
+            .field
+                .control
+                    button.button.is-info Save
