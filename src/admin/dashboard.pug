@@ -4,8 +4,52 @@ block title
     | Admin Dashboard
 
 
+block stylesheets
+    link(rel="stylesheet", href="/css/chartist.css")
+
+block scripts
+    script(src="/js/chartist.min.js")
+    script.
+        let data = {
+        // A labels array that can contain any sort of values
+            labels: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri'],
+            // Our series array that contains series objects or in this case series data arrays
+            series: [
+                [5, 2, 4, 2, 0]
+            ]
+        };
+
+        // Create a new line chart object where as first parameter we pass in a selector
+        // that is resolving to our chart container element. The Second parameter
+        // is the actual data object.
+        new Chartist.Line('.ct-chart', data);
+
 
 block content
     .container
 
         h1.has-text-info.is-size-3 Admin Dashboard
+        br
+        br
+        .columns
+            .column.is-3
+                .box.h-100
+                    | Unprocessed Orders
+
+            .column.is-3
+                .box.h-100
+                    | 0 Drivers Online
+
+            .column.is-3
+                .box.h-100
+                    | 0 Canceled Orders
+
+            .column.is-3
+                .box.h-100
+                    | Open Tickets
+        br
+
+        .columns
+            .column.is-12
+                .ct-chart.ct-perfect-fourth(style="height: 200px")
+        
