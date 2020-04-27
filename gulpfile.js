@@ -12,6 +12,12 @@ const sourcemaps = require('gulp-sourcemaps')
 gulp.task('html', () => {
     return gulp.src(['src/**/*.pug', '!src/**/layout.pug'])
         .pipe(pug())
+        .pipe(gulp.dest('dist'))
+})
+
+gulp.task('htmlprod', () => {
+    return gulp.src(['src/**/*.pug', '!src/**/layout.pug'])
+        .pipe(pug())
         .pipe(htmlmin())
         .pipe(gulp.dest('dist'))
 })
@@ -47,7 +53,8 @@ gulp.task('copyLineAwesome', () => {
         .pipe(gulp.dest('dist/fonts'))
 })
 
-gulp.task('build', gulp.parallel('html', gulp.series('copyLineAwesome', 'stylesheets'), 'scripts'))
+gulp.task('dev', gulp.parallel('html', gulp.series('copyLineAwesome', 'stylesheets'), 'scripts'))
+gulp.task('build', gulp.parallel('htmlprod', gulp.series('copyLineAwesome', 'stylesheets'), 'scripts'))
 
 gulp.task('watch', () => {
     gulp.watch('src/*/**.pug', gulp.series('html'))
@@ -55,4 +62,4 @@ gulp.task('watch', () => {
     gulp.watch('src/assets/scss/*.scss', gulp.series('stylesheets'))
 })
 
-gulp.task('default', gulp.parallel('build', 'watch'))
+gulp.task('default', gulp.parallel('dev', 'watch'))
