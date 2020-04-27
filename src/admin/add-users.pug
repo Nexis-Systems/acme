@@ -1,0 +1,33 @@
+extends layout.pug
+
+block title
+    | Add User
+
+
+block content
+    .container
+
+        h1.has-text-info.is-size-3 Add User
+        br
+
+        .columns
+            .column.is-12
+                
+                form(action="")
+                    .field
+                        .control
+                            label.label Title
+                            input.input(type='text', placeholder='Title')
+
+                    .field
+                        .control
+                            label.label First Name
+                            input.input(type='text', placeholder='First Name')
+
+                    .field
+                        .control
+                            label.label Last Name
+                            input.input(type='text', placeholder='Last Name')
+                    .field
+                        .control
+                            button.button.is-info Save
