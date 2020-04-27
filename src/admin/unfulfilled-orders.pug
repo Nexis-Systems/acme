@@ -1,0 +1,91 @@
+extends layout.pug
+
+block title
+    | Unfulfilled Orders
+
+
+
+
+block content
+    .container
+
+        h1.has-text-info.is-size-3 Unfulfilled Orders
+        br
+
+        .columns
+
+            .column.is-8
+                form(action="", method="post")
+                    .field.is-fullwidth
+                        .control
+                            input.input(type="text", placeholder="Search")
+                            
+
+
+            .column.is-4
+                nav.pagination.custom-pagination.is-right(role='navigation', aria-label='pagination')
+                    ul.pagination-list
+                        li
+                            a.pagination-link(aria-label='Previous') 
+                                i.las.la-angle-double-left
+
+                        li
+                            a.pagination-link.is-current(aria-label='Page 1') 
+                                | 1
+                        
+                        li
+                            a.pagination-link(aria-label='Page 2') 
+                                | 2
+                        
+                        li
+                            a.pagination-link(aria-label='Page 3') 
+                                | 3
+
+                        li
+                            a.pagination-link(aria-label='Next') 
+                                i.las.la-angle-double-right
+
+
+        .columns
+            .column.is-12
+                .table-container.is-fullwidth
+                    table.table.is-bordered
+                        thead
+                            tr  
+                                th Created
+                                th Order Date
+                                th Order #
+                                th Refunded
+                                th Status
+                                th Action
+                        tbody
+                            tr  
+                                td
+                                    | &nbsp;
+                                td
+                                    | &nbsp;
+                                td
+                                    | &nbsp;
+                                td
+                                    | &nbsp;
+                                td
+                                    | &nbsp;
+                                td
+                                    | &nbsp;
+                                
+                            tr  
+                                
+                                td
+                                    | &nbsp;
+                                td
+                                    | &nbsp;
+                                td
+                                    | &nbsp;
+                                td
+                                    | &nbsp;
+                                td
+                                    | &nbsp;
+                                td
+                                    | &nbsp;
+
+                            
