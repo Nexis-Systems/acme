@@ -1,5 +1,9 @@
 html {
     overflow-y: hidden;
+
+    & * {
+        overflow: hidden !important;
+    }
 }
 
 body {
@@ -14,6 +18,13 @@ body {
 .navbar.top-nav {
     padding: 0px 10px;
 
+    a.navbar-item {
+        &:hover, &:focus, &.is-active {
+            color: #fff;
+            background-color: #363636;
+        }
+    }
+
     .navbar-brand {
         display: block;
         font-size: 28px;
@@ -26,21 +37,65 @@ body {
             border: 1px solid #000000;
         }
 
+        
+
         .navbar-item {
             padding: 0px;
+
+            &:hover, &:focus, &.is-active {
+                color: #000000;
+                background-color: transparent;
+            }
         }
+    }
+
+    .search-bar {
+        position: relative;
+        
+        form {
+            margin-block-end: 0px;
+            
+            input {
+                width: 350px;
+
+                &:hover, &:focus {
+                    outline-color: #363636;
+                }
+            }
+
+            button {
+                background: transparent;
+                border: none;
+                outline: none;
+                position: absolute;
+                top: 9px;
+                right: 13px;
+                cursor: pointer;
+                padding: 6px;
+                transition: all 500ms;
+                border-top-right-radius: 4px;
+                border-bottom-right-radius: 4px;
+                &:hover {
+                    color: #fff;
+                    background-color: #363636;
+                }
+            }
+        }
+
+        
     }
 }
 
 .side-menu {
-    margin-top: 30px;
+    margin-top: 40px;
     background-color: #f6f6f6;
 }
 
 aside.menu.side-menu {
 
     padding: 30px 15px;
-    overflow-y: auto;
+    overflow-y: auto !important;
+    height: calc(100% - 40px) !important;
 
     .menu-list a.is-active {
         max-width: fit-content;
@@ -165,4 +220,39 @@ $unchecked-color: #888;
       width: 18px;
     }
   }
+}
+
+
+
+// FOR TABLETS AND MOBILE SCREENS
+
+@media only screen and (max-width: 1023px) {
+    .navbar.top-nav {
+        .navbar-brand {
+            display: inline-block;
+        }
+        
+    }
+    .navbar-burger {
+        display: inline-block;
+        float: right;
+
+        span {
+            height: 2px;
+        }
+    }
+    .side-menu {
+        margin-top: 20px;
+        background-color: #f6f6f6;
+    }
+
+    .navbar-item:not(.search-bar) {
+        float: right;
+    }
+
+    .navbar.top-nav .search-bar form input {
+        width: 100%;
+    }
+
+
 }
