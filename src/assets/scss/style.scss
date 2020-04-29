@@ -231,10 +231,12 @@ $unchecked-color: #888;
 
     // NAVBAR....
     .navbar.top-nav {
+        z-index: 100;
+        padding: 0px !important;
+
         .navbar-brand {
             display: inline-block;
         }
-        
     }
     .navbar-burger {
         display: inline-block;
@@ -302,5 +304,44 @@ $unchecked-color: #888;
                 }
             }
         }
+    }
+
+    // SIDEBAR
+
+    .container.is-fluid.wrap-up{
+        & > .columns.is-fullheight {
+            & > .column.is-hidden-touch {
+                display: none !important; 
+                visibility: collapse;
+                height: 0px !important;
+                width: 0px !important;
+            }
+
+            & > .column.is-hidden-touch.is-visible {
+                display: block !important;
+                visibility: visible !important;
+                height: calc(100vh - 30px) !important;
+                width: 100vw !important;
+                position: absolute;
+                top: 0;
+                bottom: 0;
+                left: 0;
+                right: 0;
+                z-index: 99;
+                padding: 0px !important;
+                margin-top: 50px;
+                
+                .menu.side-menu {
+                    text-align: left;
+                }
+            }
+        }
+    }
+
+    .sidebar-toggler {
+        position: absolute;
+        right: 15px;
+        bottom: 15px;
+        z-index: 999;
     }
 }
