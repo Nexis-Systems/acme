@@ -1,6 +1,7 @@
 html(lang="en")
     head
         meta(charset="UTF-8")
+        meta(name='author', content='Abdul Rehman (https://github.com/AbdulRehmanMehar)')
         meta(name="viewport", content="width=device-width, initial-scale = 1.0, maximum-scale=1.0, user-scalable=no")
         title 
             block title
@@ -45,7 +46,7 @@ html(lang="en")
 
         
             .columns.is-fullheight
-                .column.is-2
+                .column.is-2-desktop.is-hidden-touch
                     //- Side Menu
                     aside.menu.side-menu
                         p.menu-label
@@ -66,7 +67,7 @@ html(lang="en")
                             li
                                 a(href="/customer/reviews.html") My Reviews
 
-                .column.is-10
+                .column.is-10-desktop.is-12-tablet.is-12-mobile
                     .content-wrapper
                         block content
 

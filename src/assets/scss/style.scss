@@ -122,8 +122,9 @@ aside.menu.side-menu {
 .is-fullheight.columns {
     height: calc(100vh - ( 3.25rem - .75rem ) );
 
-    .column, .column > * {
+    & > .column, & > .column > * {
         height: 100%;
+        overflow-y: auto !important;
     }
 }
 
@@ -227,6 +228,8 @@ $unchecked-color: #888;
 // FOR TABLETS AND MOBILE SCREENS
 
 @media only screen and (max-width: 1023px) {
+
+    // NAVBAR....
     .navbar.top-nav {
         .navbar-brand {
             display: inline-block;
@@ -254,5 +257,50 @@ $unchecked-color: #888;
         width: 100%;
     }
 
+    // TABS....
+    .tabs ul {
+        flex-direction: column;
 
+        li {
+            width: 100%;
+            margin: 5px 0px;
+        }
+    }
+
+    // COLUMN & CONTENT WRAPPER
+    .columns {
+        margin: 0 auto;
+        text-align: center;
+    }
+
+    .content-wrapper {
+        padding: 0px;
+    }
+
+    .table-container.is-fullwidth, .overflow-x {
+        overflow-x: auto !important;
+    }
+
+    // FORM
+    form {
+        margin-bottom: 70px;
+    
+        .field.is-grouped {
+            display: block;
+            .control {
+                display: block;
+            }
+            .select {
+                width: 100vw;
+                margin-top: 5px !important;
+                margin-left: 0px !important;
+                margin-right: 0px !important;
+                margin-bottom: 5px !important;
+
+                select {
+                    width: 100%;
+                }
+            }
+        }
+    }
 }

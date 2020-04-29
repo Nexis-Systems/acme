@@ -14,7 +14,7 @@ block content
 
         .columns
 
-            .column.is-4
+            .column.is-4-desktop.is-12-tablet.is-12-mobile
                 form(action="", method="post")
                     .field.is-fullwidth
                         .control
@@ -22,12 +22,12 @@ block content
                             
 
 
-            .column.is-8
+            .column.is-8-desktop.is-hidden-touch
                 | &nbsp;
    
 
         .columns
-            .column.is-12
+            .column.is-12-desktop
                 div(style="float: right; margin: 10px 0px;")
                     .buttons
                         a.button.is-dark Filter
@@ -92,10 +92,10 @@ block content
         
 
         .columns
-            .column.is-8
+            .column.is-8-desktop.is-hidden-touch
                 | &nbsp;
             
-            .column.is-4
+            .column.is-4-desktop.is-12-tablet.is-12-mobile
                 nav.pagination.custom-pagination.is-right(role='navigation', aria-label='pagination')
                     ul.pagination-list
                         li
