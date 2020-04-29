@@ -1,7 +1,7 @@
 html(lang="en")
     head
         meta(charset="UTF-8")
-        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        meta(name="viewport", content="width=device-width, initial-scale = 1.0, maximum-scale=1.0, user-scalable=no")
         title 
             block title
             |  - Customer Dashboard - ACME 
@@ -26,8 +26,11 @@ html(lang="en")
                 #navbarBasicExample.navbar-menu
                     
                     .navbar-end
-                        .navbar-item
-                            input.input(type="text", placeholder="Search")
+                        .navbar-item.search-bar
+                            form(action="", method="get")
+                                input.input(type="search", placeholder="Search")
+                                button
+                                    i.las.la-search.la-2x
                         .navbar-item
                             .buttons
                                 a.button.is-dark WISHLIST
