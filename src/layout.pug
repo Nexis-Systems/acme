@@ -1,0 +1,104 @@
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(name='author', content='Abdul Rehman (https://github.com/AbdulRehmanMehar)')
+        meta(name="viewport", content="width=device-width, initial-scale = 1.0, maximum-scale=1.0, user-scalable=no")
+        title 
+            block title
+            |  - ACME 
+            
+        link(rel="stylesheet", href="/css/bulma.css")
+        link(rel="stylesheet", href="/css/line-awesome.css")
+        link(rel="stylesheet", href="/css/style.css")
+
+        block stylesheets
+
+    body
+        .container.is-fluid.wrap-up
+            //- Top Navigation
+            nav.navbar.top-nav(role='navigation' aria-label='main navigation')
+                .navbar-row.head
+                    .navbar-start
+                        a.navbar-item 
+                            | HOW TO GET STARTED
+                    
+                    .navbar-end
+                        a.navbar-item
+                            i.lab.la-lg.la-dribbble
+                        
+                        a.navbar-item
+                            i.lab.la-lg.la-twitter
+
+                        a.navbar-item
+                            i.lab.la-lg.la-facebook
+
+
+                .navbar-row
+                    .navbar-brand
+                        a.navbar-item
+                            | ACME
+
+                    a.navbar-burger.burger(role='button' aria-label='menu' aria-expanded='false' data-target='navbarBasicExample')
+                        span(aria-hidden='true')
+                        span(aria-hidden='true')
+                        span(aria-hidden='true')
+                    #navbarBasicExample.navbar-menu
+                        
+                        .navbar-end.is-home-only
+                            a.navbar-item
+                            
+                                | REGISTER
+
+                            .navbar-item.is-disabled.is-seperator.is-hidden-touch
+
+                            a.navbar-item
+                            
+                                | LOGIN
+                            
+
+        
+            .columns.is-fullheight
+                .column.is-12-desktop.is-12-tablet.is-12-mobile
+                    .content-wrapper
+                        block content
+
+
+        
+            .footer.is-home-only
+                .navbar-menu
+                    a.navbar-item
+                        span
+                            | About
+
+                    .navbar-item.is-disabled.is-seperator.is-hidden-touch
+
+                    a.navbar-item
+                        span
+                            | Contact Us
+                        
+                    .navbar-item.is-disabled.is-seperator.is-hidden-touch
+
+                    a.navbar-item
+                        span
+                            | Terms and Conditions
+                        
+                    .navbar-item.is-disabled.is-seperator.is-hidden-touch
+
+                    a.navbar-item
+                        span
+                            | Become a Driver
+                        
+                    .navbar-item.is-disabled.is-seperator.is-hidden-touch
+
+                    a.navbar-item
+                        span
+                            | Become a Vendor
+
+                p Copyright &copy; 2020 Nextdrop Inc
+                        
+
+
+        script(src="/js/script.js")
+
+        block scripts
+
