@@ -70,7 +70,7 @@ gulp.task('dev', gulp.parallel('html', gulp.series('copyLineAwesome', 'styleshee
 gulp.task('build', gulp.parallel('htmlprod', gulp.series('copyLineAwesome', 'stylesheets'), gulp.series('scripts', 'copyScripts')))
 
 gulp.task('watch', () => {
-    gulp.watch('src/*/**.pug', gulp.series('html'))
+    gulp.watch(['src/*.pug', 'src/*/**.pug'], gulp.series('html'))
     gulp.watch('src/assets/js/*.js', gulp.series('scripts'))
     gulp.watch('src/assets/scss/*.scss', gulp.series('stylesheets'))
 })
