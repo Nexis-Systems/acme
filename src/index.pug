@@ -1,18 +1,17 @@
-<!DOCTYPE html>
-html(lang="en")
-    head
-        meta(charset="UTF-8")
-        meta(name="viewport", content="width=device-width, initial-scale=1.0")
-        title ACME - FRONTEND
-    body
+extends layout.pug
 
-        h1 Welcome to ACME web project
+block title
+    | Home
 
-        p 
-            a(href="admin/dashboard.html") Admin Dashboard
-
-        p 
-            a(href="customer/dashboard.html") Customer Dashboard
-
-        p 
-            a(href="driver/dashboard.html") Driver Dashboard
+block content
+    .homepage-wrapper
+        .form-wrapper
+            form(action="", method="get")
+                .field
+                    .control
+                        input.input(type='search', placeholder='Location')
+                        i.las.la-map-marker.la-2x
+                .field
+                    .control
+                        button.button.is-info(type="submit")
+                            | Start Shopping
